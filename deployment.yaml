@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: bee-quotes-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: bee-quotes
+  template:
+    metadata:
+      labels:
+        app: bee-quotes
+    spec:
+      containers:
+      - name: bee-quotes-container
+        image: eltohami/bee-quotes-app:v1
+        ports:
+        - containerPort: 5050
