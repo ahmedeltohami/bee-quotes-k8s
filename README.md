@@ -1,19 +1,31 @@
-Bee Quotes App on Kubernetes
-📌 Overview
+# Bee Quotes App on Kubernetes
 
-هذا المشروع يوضح كيفية تشغيل تطبيق Flask بسيط (Bee Quotes App) على Kubernetes باستخدام Minikube.
+## 📌 Overview
+هذا المشروع يوضح كيفية تشغيل تطبيق Flask بسيط (Bee Quotes App) على Kubernetes باستخدام Minikube.  
 الغرض من المشروع هو التعلم العملي على:
 
-    بناء تطبيق Python + Flask
-    تحويله لـ Docker Image
-    رفع الصورة على DockerHub
-    تشغيله على Kubernetes (Minikube)
+- بناء تطبيق Python + Flask  
+- تحويله لـ Docker Image  
+- رفع الصورة على DockerHub  
+- تشغيله على Kubernetes (Minikube)  
 
-📂 Project Structure
+---
 
-. ├── app.py ├── requirements.txt ├── Dockerfile ├── deployment.yaml ├── service.yaml └── README.md
-🐍 1. Application File (app.py)
+## 📂 Project Structure
+.
+├── app.py
+├── requirements.txt
+├── Dockerfile
+├── deployment.yaml
+├── service.yaml
+└── README.md
 
+
+
+---
+
+## 🐍 1. Application File (app.py)
+```python
 from flask import Flask, jsonify
 
 app = Flask(__name__)
@@ -169,5 +181,4 @@ ________________________________
 
 يجب رفع صورة Docker على DockerHub.
 
-يمكن استخدام Port-Forward إذا كان NodePort لا يعمل.
-
+يمكن استخدام Port-Forward إذا كان NodePort لا يعمل
